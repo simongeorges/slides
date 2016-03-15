@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Twig</title>
+
+		<meta name="description" content="Introduction à Twig">
+		<meta name="author" content="Simon Georges">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Introduction à Twig</h1>
+				</section>
+
+				<section>
+          <h2>Twig</h2>
+          <h3>Un template engine pour PHP</h3>
+          <p>(Drupal utilise PHPTemplate jusqu'à Drupal 7)</p>
+          <p><a href="http://twig.sensiolabs.org">Documentation de référence</a></p>
+				</section>
+
+				<section>
+					<h2>Avantages</h2>
+					<ul>
+            <li>Sécurisé</li>
+            <li>Extensible</li>
+          </ul>
+				</section>
+
+        <section>
+          <h2>3 syntaxes à connaître</h2>
+          <p class="fragment">{{ afficher }}</p>
+          <p class="fragment">{# commenter #}</p>
+          <p class="fragment">{% agir %}</p>
+        </section>
+
+        <section>
+          <h2>Exemple html.tpl.twig</h2>
+          <pre><code clas="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="{{ language.language }}" dir="{{ language.dir }}"&gt;
+&lt;head&gt;
+  <meta charset="utf-8">
+  {{ head }}
+  <title>{{ head_title }}</title>
+  {{ styles }}
+&lt;/head&gt;
+&lt;body class="{{ classes }}" {{ attributes }}&gt;
+  {{ page_top }}
+  {{ page }}
+  {{ scripts }}
+  {{ page_bottom }}
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+				<section>
+          <h2>{{ foo.bar }}</h2>
+					<ul>
+						<li>$foo['bar']</li>
+            <li>$foo->bar</li>
+            <li>$foo->getBar()</li>
+            <li>ou n'importe quoi (foo.bar->__toString())</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Les conditions</h2>
+          <p>{% if expr %}</p>
+          <p>{% else %}</p>
+          <p>{% endif %}
+				</section>
+
+				<section>
+					<h2>Les boucles</h2>
+          <p>{% for item in items %}</p>
+          <p>{% endfor %}</p>
+          <p class="fragment">Il y a un {% else %} !</p>
+				</section>
+
+        <section>
+          <h2>Les filtres</h2>
+          <p>Twig</p>
+          <p>{{ messages | join(', ') }}</p>
+          <p>{{ "now" | date('d/m/Y H:i') }}</p>
+          <p>Drupal</p>
+          <p>{{ 'Home' | t }}</p>
+          <p>Sur une section</p>
+          <pre><code>{% filter upper %}
+  Ce texte passera en majuscules.
+{% endfilter %}</code></pre>
+        </section>
+
+        <section>
+          <h2>Filtres Twig</h2>
+          <p>abs, batch, capitalize, convert_encoding, date, date_modify, default, escape, first, format, join, json_encode, keys, last, length, lower, merge, nl2br, number_format, raw, replace, reverse, round, slice, sort, split, striptags, title, trim, upper, url_encode</p>
+        </section>
+
+        <section>
+          <h2>Les fonctions</h2>
+          <p>dump(node)</p>
+          <p>{{ max(1, 3, 2) }}</p>
+          <p>{{ random(['pomme', 'orange', 'citron']) }}</p>
+        </section>
+
+        <section>
+          <h2>Héritage</h2>
+          <pre><code clas="html">{# Template A #}
+{% block foo %}
+  <p>Mon premier paragraphe</p>
+{% endblock %}
+
+{# Template B #}
+{% extends 'TemplateA' %}
+{% block foo %}
+  {{ parent() }}
+  <p>Mon deuxième paragraphe</p>
+{% endblock %}
+
+{# Rendu Template B #}
+<p>Mon premier paragraphe</p>
+<p>Mon deuxième paragraphe</p></code></pre>
+        </section>
+
+        <section>
+          <h2>Inclusion</h2>
+          <p>{% include 'page.html.twig' with {'foo': 'bar', 'baz': 'bat'} %}</p>
+        </section>
+
+        <section>
+          <h2>Questions ?</h2>
+        </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
