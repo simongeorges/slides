@@ -77,12 +77,13 @@
           <h2>Pathauto</h2>
           <p>Réécriture automatique d'URLs</p>
           <p><img class="img-no-border" src="img/Pathauto.png" /></p>
+          <p><img class="img-no-border" src="img/Pathauto2.png" /></p>
         </section>
 
         <section>
           <h2>Metatag</h2>
           <p>Tout est dans le nom</p>
-          <p><img class="img-no-border" src="img/Metatag.png" /></p>
+          <p><img class="img-no-border" src="img/Metatag.png" /> <img class="img-no-border" src="img/Metatag2.png" /></p>
         </section>
 
         <section>
@@ -92,28 +93,28 @@
         </section>
 
         <section>
-          <h2>Sitemap</h2>
+          <h2>Site_map</h2>
+          <p>Créé l'URL /sitemap</p>
           <p><img class="img-no-border" src="img/Sitemap.png" /></p>
         </section>
 
         <section>
           <h2>XML Sitemap</h2>
           <p>Attention : difficile à configurer</p>
-          <p>Simple XML Sitemap en Drupal 8</p>
+          <p>Pas encore en Drupal 8 (=> Simple XML Sitemap)</p>
           <p><img class="img-no-border" src="img/XML_Sitemap.png" /></p>
         </section>
 
         <section>
           <h2>Redirect</h2>
           <p>Gestion des redirections</p>
-          <p><img class="img-no-border" src="img/redirect.png" /></p>
+          <p><img class="img-no-border" src="img/Redirect.png" /></p>
         </section>
 
         <section>
           <h2>Internationalization</h2>
-          <p>i18n & EntityTranslation en Drupal 7</p>
-          <p>Inclus dans le cœur en Drupal 8</p>
-          <p><img class="img-no-border" src="img/i18n.png" /></p>
+          <p>Toutes les stratégies (domaine, préfixe, ...) sont supportées</p>
+          <p>Mais il manque les hreflang => module "hreflang"</p>
         </section>
 
         <section>
@@ -128,22 +129,33 @@
         </section>
 
         <section>
+          <h2>La sémantique</h2>
+          <p>"knowledge_graph",<br />
+          "sdm" (Structured Data Markup),<br />
+          "schemaorg", "efb", "microdata"</p>
+          <p>Incompatibles entre eux</p>
+          <p><a href="http://makina-corpus.com/blog/metier/2013/une-autre-facon-de-creer-des-sites-en-drupal">Une autre façon de créer des sites</a></p>
+        </section>
+
+        <section>
           <h2>Et le reste !</h2>
-          <p>Schemaorg, AMP, YoastSEO, ...</p>
+          <p>AMP, YoastSEO, ...</p>
+          <a href="https://amphtml.wordpress.com/2016/03/02/amping-up-drupal/">Amping Up Drupal</a>
         </section>
 
         <section>
           <h2>Modules à éviter !</h2>
           <p>SEO Checklist, ...</p>
+          <p>En fait, tous ceux qui ont "SEO" dans le nom...</p>
         </section>
 
         <section>
           <h2>Le thème</h2>
-          <p>Tout est dedans :</p>
+          <p>Tout est personnalisable :</p>
           <ul>
             <li>Accessibilité</li>
             <li>Sécurité (mieux en D8)</li>
-            <li>Micro-formats</li>
+            <li>Sémantique (Fil d'ariane, ...)</li>
           </ul>
         </section>
 
@@ -152,53 +164,55 @@
         </section>
 
         <section>
-          <h2>Problème numéro 1 : contenu dupliqué</h2>
+          <h2>Contenu dupliqué</h2>
           <p>Plusieurs urls existent (code 200) :<p>
           <ul>
             <li>node/%id%</li>
             <li>l'url réécrite ("alias")</li>
           </ul>
           <p>=> Module "Global Redirect" (Drupal 7)</p>
-          <p><img class="img-no-border" src="img/Global_Redirect.png" /></p>
+          <p>Aucune configuration</p>
           <p>=> Module "Redirect" (Drupal 8)</p>
+          <p><img class="img-no-border" src="img/Global_Redirect.png" /></p>
         </section>
 
         <section>
-          <h2>Problème numéro 2 : structure</h2>
+          <h2>Pages inutiles</h2>
+          <p>Tout contenu, tout terme de taxonomie crée une page</p>
+          <p>=> Ne pas oublier les NOINDEX</p>
+        </section>
+
+        <section>
+          <h2>Structure</h2>
           <p>Pas de hiérarchie forcée<br />(Les "rubriques" n'existent pas)</p>
-          <p>=> Il faut parfois "penser" l'arborescence différemment</p>
+          <p>C'est aussi une force, vous faites ce que vous voulez</p>
         </section>
 
         <section>
-          <h2>Problème numéro 3 : performance</h2>
+          <h2>Performance par défaut</h2>
           <p>Non-activation des caches<br />("Configuration" / "Performance")</p>
           <p><img class="img-no-border" src="img/Performance.png" /></p>
           <p>Ou utiliser Drupal 8 !</p>
         </section>
 
         <section>
-          <h2>Problème numéro 4 : pages inutiles</h2>
-          <p>Tout contenu, tout terme de taxonomie crée une page</p>
-          <p>=> Ne pas oublier les NOINDEX</p>
+          <h2>Tout est modulaire</h2>
+          <p>Chaque site a des problèmes différents</p>
+          <p>Exemple : Les pages de confirmation de Webform ne sont pas connectées à Metatag, il faut donc développer un peu</p>
         </section>
 
         <section>
-          <h2>Problème numéro 5 : tout est modulaire</h2>
-          <p>Les pages de confirmation de Webform ne sont pas connectées à Metatag</p>
-          <p>=> Il faut parfois développer un peu</p>
-        </section>
-
-        <section>
-          <h2>Problème numéro 6 : configuration par défaut</h2>
-          <p>~ Triplette du bourrin</p>
+          <h2>Configuration par défaut</h2>
+          <p>~ <a href="http://www.laurentbourrelly.com/blog/874.php">Triplette du bourrin</a></p>
           <p>H1 = TITLE ~ URL</p>
+          <p>Pas réellement un problème, en plus tout est ajustable</p>
         </section>
 
         <section>
           <h2>Qu'apporte Drupal 8 ?</h2>
-          <p>En SEO... rien</p>
+          <p>En SEO... rien, mais tous les modules sont portés</p>
           <p>Beaucoup de travail sur les performances :<br />Big Pipe, RefreshLess</p>
-          <p>TO DO : Vidéo ?</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JwzX0Qv6u3A?t=10" frameborder="0" allowfullscreen></iframe>
         </section>
 
         <section>
