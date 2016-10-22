@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SEO & indexation de site : de la théorie à la pratique</title>
+
+		<meta name="description" content="SEO & indexation de site : de la théorie à la pratique">
+		<meta name="author" content="Simon Georges">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SEO & indexation</h1>
+					<h3>De la théorie à la pratique</h3>
+					<p><a href="https://twitter.com/simongeorges">Simon Georges</a> / <a href="https://twitter.com/makina_corpus">Makina Corpus</a></p>
+				</section>
+
+				<section>
+					<h2>Qui suis-je ?</h2>
+          <p>Makina Corpus est spécialisée dans les logiciels libres<br />
+          (avec une expertise très technique)</p>
+          <img src="img/logo_makinacorpus.png" />
+          <p>Je suis un expert Drupal...<br/>qui s'intéresse notamment au côté technique du SEO.</p>
+				</section>
+
+        <section>
+          <h2>Le tryptique du SEO</h2>
+          <p>Technique / Contenu / Popularité</p>
+        </section>
+
+        <section>
+          <h2>Un peu d'histoire</h2>
+          <p>Il y a 15 ans, il fallait essayer de se référencer.</p>
+          <p>Aujourd'hui, il faut essayer de se différencier.</p>
+        </section>
+
+        <section>
+          <h2>Les CMS...</h2>
+          <p>Trop de pages sont indexées</p>
+          <p>Les pré-productions sont indexées</p>
+          <p>Les pages de test sont indexées</p>
+          <p>...</p>
+        </section>
+
+        <section>
+          <h2>La technique...</h2>
+          <p>L'objectif est de canaliser le parcours des robots sur le site</p>
+        </section>
+
+				<section>
+					<h2>Les bases</h2>
+					<ul>
+            <li>Le fichier robots.txt</li>
+            <li>Le fichier sitemap.xml</li>
+          </ul>
+				</section>
+
+        <section>
+          <h2>Le robots.txt</h2>
+          <p>Permet d'interdire des pages aux robots</p>
+          <p>NE contrôle PAS l'indexation</p>
+        </section>
+
+				<section>
+					<h2>Le sitemap.xml</h2>
+          <p>Indique aux moteurs les pages que l'on souhaite crawler.</p>
+          <p>Éventuellement inutile selon la taille de votre site.</p>
+          <p>Il faut à tout prix éviter une sitemap incorrecte.</p>
+				</section>
+
+        <section>
+          <h2>Le fonctionnement du crawl</h2>
+          <p class="fragment">Le robot passe sur la page d'accueil...</p>
+          <p class="fragment">... Met tous les liens dans la liste...</p>
+          <p class="fragment">... Et parcourt ces liens</p>
+          <p class="fragment">(et recommence avec ces nouvelles pages)</p>
+        </section>
+
+        <section>
+          <h2>Simulation d'un crawl</h2>
+          <p>À l'aide de logiciels :</p>
+          <ul>
+            <li>ScreamingFrog SEO Spider</li>
+            <li>BeamUsUp</li>
+            <li>Botify (Saas)</li>
+            <li>Oncrawl (Saas)</li>
+            <li>...</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Résultats du crawl</h2>
+					<p class="fragment highlight-red">
+            DEMO
+					</p>
+        </section>
+
+        <section>
+          <h2>Exploitation (avec Gephi)</h2>
+					<p class="fragment highlight-red">
+            DEMO
+					</p>
+        </section>
+
+        <section>
+          <h2>Analyse de structure</h2>
+          <img src="img/mega-menu.png" />
+        </section>
+
+        <section>
+          <h2>Analyse de structure</h2>
+          <img src="img/silos.png" />
+        </section>
+
+        <section>
+          <h2>Détection d'anomalies</h2>
+          <img src="img/Gephi1.png" />
+        </section>
+
+        <section>
+          <h2>Détection d'anomalies</h2>
+          <img src="img/calendrier.png" />
+          <p>Un <strong>spider trap</strong> sur la page d'accueil !</p>
+          <p>Attention aux paginations infinies, filtres à facets, ...</p>
+        </section>
+
+        <section>
+          <h2>Cocon.Se (Saas)</h2>
+          <img src="img/cmap.png" />
+        </section>
+
+        <section>
+          <h2>Le budget de crawl</h2>
+          <p>Combien de pages Google peut crawler par jour SUR VOTRE SITE ?</p>
+          <p>Quelles sont les pages qui valent la peine d'être crawlées ?</p>
+        </section>
+
+        <section>
+          <h2>La performance du site</h2>
+          <p>Viser 400ms (et même moins)</p>
+          <img src="img/crawl_time.png" />
+          <p>Aidez Google à parcourir plus de pages de votre site</p>
+        </section>
+
+        <section>
+          <h2>Comment contrôler ?</h2>
+          <p>Search Console</p>
+          <img src="img/Crawl-stats.png" />
+          <p>Pages = files (CSS, JS, PDF, ...)</p>
+          <p>GoogleBot = GoogleNews, Google Mobile, ...</p>
+        </section>
+
+        <section>
+          <h2>Il faut aller plus loin !</h2>
+          <h3>Analyse de logs</h3>
+          <p>Screaming Frog</p>
+          <p>Botify (Saas)</p>
+          <p>Loggly (Saas)</p>
+        </section>
+
+        <section>
+          <img src="img/logs_events.png" />
+        </section>
+
+        <section>
+          <img src="img/logs_urls.png" />
+        </section>
+
+        <section>
+          <img src="img/logs_status.png" />
+        </section>
+
+        <section>
+          <h2>Détection d'anomalies</h2>
+          <p>404 crawlées souvent, urls d'un ancien site non redirigées, ...</p>
+        </section>
+
+        <section>
+          <h2>Fréquences de crawl</h2>
+          <p>3 couches de crawl :</p>
+          <ul>
+            <li>"Temps réel" (plusieurs fois par jour)</li>
+            <li>1 fois par jour</li>
+            <li>le reste... découpé également en plusieurs segements ("actives" et inactives, déjà...)</li>
+          </ul>
+          <p>Les pages bougent entre les couches (au gré de vos changements)</p>
+        </section>
+
+        <section>
+          <h2>Le travail commence</h2>
+          <p>Identifier dans quelle couche sont les URLs de votre site</p>
+          <p>Nettoyer ce qui traîne</p>
+        </section>
+
+        <section>
+          <h2>Plutôt pour les gros sites</h2>
+          <p>À partir d'une ou même plusieurs centaines de pages</p>
+          <blockquote>I have never seen and never worked with a large site where improving crawl bandwidth didn’t  mean significant increases in organic search traffic <cite>(dans un article de <a href="https://moz.com/blog/earn-higher-rankings-without-content-creation-whiteboard-friday">Rand Fishkin</a>)</cite></blockquote>
+        </section>
+
+        <section>
+          <h2>La théorie</h2>
+          <blockquote>Tout ce qui est crawlé est indexé.</blockquote>
+        </section>
+
+        <section>
+          <h2>La pratique</h2>
+          <blockquote>Déjà... tout N'est PAS crawlé...</blockquote>
+          <p>Quid de l'indexation ?</p>
+        </section>
+
+        <section>
+          <h2>Google choisit les pages qu'il estime mériter d'être dans son index</h2>
+        </section>
+
+        <section>
+          <h2>Indications (Search Console)</h2>
+          <p>Menu Google Index / Index Status</p>
+          <img src="img/index_search_console.png" />
+        </section>
+
+        <section>
+          <h2>Directement sur Google</h2>
+          <p>Avec la commande site:domain</p>
+          <img src="img/index_google.png" />
+        </section>
+
+        <section>
+          <h2>Mais...</h2>
+          <p>Google sépare les pages en 2 indexs</p>
+          <img src="img/index_secondaire_google.png" />
+        </section>
+
+        <section>
+          <h2>La balise META robots</h2>
+          <p>Le seul moyen de contrôler la NON indexation</p>
+          <p>&lt;META name="robots" value="NOINDEX"&gt;</p>
+        </section>
+
+        <section>
+          <h2>Commencez par<br />faire un "bon" site</h2>
+          <p>Visez la qualité, pour les moteurs mais surtout pour vos utilisateurs</p>
+        </section>
+
+				<section>
+					<h1>Des questions ?</h1>
+          <p>Quelques ressources pour aller plus loin<br />(les articles qui ont inspiré cette conférence) :</p>
+          <p><a href="http://www.slideshare.net/DawnFitton/big-digital-adelaide-negotiating-crawl-budget-with-googlebots">Crawl budget 1</a> / <a href="http://www.htitipi.com/blog/indexation.html">Indexation</a> / <a href="http://www.slideshare.net/DawnFitton/technical-seo-myths-facts-and-theories-on-crawl-budget-and-the-importance-of-url-importance-optimization-pubcon-vegas-2016">Crawl budget 2</a></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
