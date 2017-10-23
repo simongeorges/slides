@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Retour d'expérience sur Migrate en Drupal 8</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h1>Migrate & Drupal 8</h1>
+          <h2>Retour d'expérience</h2>
+        </section>
+
+				<section>
+          <h2>Qui a déjà fait au moins 2 migrations ?</h2>
+        </section>
+
+				<section>
+          <img src="simon_georges.jpg" style="float:right;" />
+          <h2>Qui suis-je ?</h2>
+          <p><a href="https://twitter.com/simongeorges">@simongeorges</a></p>
+          <p><img src="logo_makinacorpus.jpg" width="50px" height="50px" style="margin:0 0 -10px 0;" /> Expert Drupal - SEO</p>
+        </section>
+
+				<section>
+          <h2>Migrate est dans le core</h2>
+          <p>Oui…</p>
+          <p>…et non</p>
+        </section>
+
+				<section>
+          <h2>Les autres modules importants</h2>
+          <ul>
+            <li>Migrate Tools : les commandes drush</li>
+            <li>Migrate Plus : plein de choses</li>
+            <li>Et d'autres… TODO list</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Migrate Plus</h2>
+          <ul>
+            <li>Configuration Entity "Migration"</li>
+            <li>Classe "SourcePluginExtension"</li>
+            <li>Plugin source "Url"</li>
+            <li>Plusieurs plugins de process
+              <ul>
+                <li>Entity Lookup & Entity Generate</li>
+                <li>Merge</li>
+                <li>SkipOnValue</li>
+              </ul></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Mais aussi</h2>
+          <ul>
+            <li>Des types de plugins
+              <ul>
+                <li>Data fetcher (File, Http)</li>
+                <li>Data parser (Simple Xml, Xml, Json, Soap)</li>
+                <li>Authentication (OAuth, Basic, Digest)</li>
+              </ul></li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Quelques cas d'utilisation de Migrate</h2>
+          <ul>
+            <li>RSS (<a href="https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/">Stop waiting for Feeds</a>)</li>
+            <li>Import massif de données</li>
+            <li>Migration d'un site à l'autre</li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Quelques exemples de codes</h2>
+        </section>
+
+				<section>
+          <h2>La base (source, dest, process)</h2>
+        </section>
+
+				<section>
+          <h2>Une source simple : CSV</h2>
+        </section>
+
+				<section>
+          <h2>Une source complexe : le RSS</h2>
+        </section>
+
+				<section>
+          <h2>Une destination simple : un node</h2>
+        </section>
+
+				<section>
+          <h2>une destination complexe : un fichier multilingue</h2>
+        </section>
+
+				<section>
+          <h2>Un process simple : mapping de title</h2>
+        </section>
+
+				<section>
+          <h2>Un process simple : mapping de title</h2>
+        </section>
+
+				<section>
+          <h2>Des plugins utiles</h2>
+          <ul>
+            <li>FormatDate</li>
+            <li>SkipOnEmpty</li>
+            <li>StaticMap</li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Quelques exemples de codes</h2>
+        </section>
+
+				<section>
+          <h2>Résolution de problèmes</h2>
+        </section>
+
+				<section>
+          <h2>Questions</h2>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
