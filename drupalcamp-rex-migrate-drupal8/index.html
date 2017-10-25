@@ -31,7 +31,7 @@
         </section>
 
 				<section>
-          <h2>Qui a déjà fait au moins 2 migrations ?</h2>
+          <h2>Qui a déjà fait au moins 2 migrations en Drupal 8 ?</h2>
         </section>
 
 				<section>
@@ -48,11 +48,28 @@
         </section>
 
 				<section>
-          <h2>Les autres modules importants</h2>
+          <h2>C'est quoi une migration ?</h2>
           <ul>
-            <li>Migrate Tools : les commandes drush</li>
-            <li>Migrate Plus : plein de choses</li>
-            <li>Et d'autres… TODO list</li>
+            <li>Une source</li>
+            <li>Une destination</li>
+            <li>Un process</li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Quelques cas d'utilisation de Migrate</h2>
+          <ul>
+            <li>RSS (<a href="https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/">Stop waiting for Feeds</a>)</li>
+            <li>Import massif de données</li>
+            <li>Migration d'un site à un autre</li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Des modules importants</h2>
+          <ul>
+            <li>Migrate Tools (pour aller plus vite)</li>
+            <li>Migrate Plus (pour aller plus loin)</li>
           </ul>
         </section>
 
@@ -84,44 +101,98 @@
         </section>
 
 				<section>
-          <h2>Quelques cas d'utilisation de Migrate</h2>
-          <ul>
-            <li>RSS (<a href="https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/">Stop waiting for Feeds</a>)</li>
-            <li>Import massif de données</li>
-            <li>Migration d'un site à l'autre</li>
-          </ul>
-        </section>
-
-				<section>
           <h2>Quelques exemples de codes</h2>
-        </section>
-
-				<section>
-          <h2>La base (source, dest, process)</h2>
+          <p>(Avouez que vous êtes là pour ça)</p>
         </section>
 
 				<section>
           <h2>Une source simple : CSV</h2>
+          <pre><code data-trim>
+source:
+  plugin: csv
+  delimiter: ,
+  path: 'public://data.csv'
+  header_row_count: 1
+  keys:
+    - Name
+          </code></pre>
         </section>
 
 				<section>
           <h2>Une source complexe : le RSS</h2>
+          <pre><code data-trim>
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  urls: 'https://example.com/feed.rss'
+  data_parser_plugin: simple_xml
+  item_selector: /rss/channel/item
+  fields:
+    -
+      name: guid
+      label: GUID
+      selector: guid
+    -
+      name: image
+      label: Image
+      selector: 'itunes:image[''href'']'
+          </code></pre>
         </section>
 
 				<section>
-          <h2>Une destination simple : un node</h2>
+          <h2>Une destination simple</h2>
+          <pre><code data-trim>
+destination:
+  plugin: entity:node
+          </code></pre>
         </section>
 
 				<section>
-          <h2>une destination complexe : un fichier multilingue</h2>
+          <h2>une destination complexe</h2>
+          <pre><code data-trim>
+destination:
+  plugin: entity:node
+          </code></pre>
         </section>
 
 				<section>
-          <h2>Un process simple : mapping de title</h2>
+          <h2>Un process simple</h2>
+          <pre><code data-trim>
+process:
+  title: Title
+  type:
+    plugin: default_value
+    default_value: page
+  empty: { }
+          </code></pre>
         </section>
 
 				<section>
-          <h2>Un process simple : mapping de title</h2>
+          <h2>Un process medium</h2>
+          <pre><code data-trim>
+process:
+  'body/value': body
+  'body/summary': summary
+          </code></pre>
+        </section>
+
+				<section>
+          <h2>Un process complexe</h2>
+          <pre><code data-trim>
+process:
+  field_my_taxonomy:
+    -
+      plugin: explode
+      source: My taxonomy
+      delimiter: ","
+    -
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: entity_lookup
+      entity_type: taxonomy_term
+      value_key: 'name'
+          </code></pre>
         </section>
 
 				<section>
@@ -133,12 +204,95 @@
           </ul>
         </section>
 
-				<section>
-          <h2>Quelques exemples de codes</h2>
+        <section>
+          <h2>Format Date</h2>
+          <pre><code data-trim>
+process:
+  created:
+    plugin: format_date
+    from_format: 'D, d M Y H:i:s O'
+    to_format: 'U'
+    source: pub_date
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Skip On Empty</h2>
+          <pre><code data-trim>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Static Map</h2>
+          <pre><code data-trim>
+          </code></pre>
         </section>
 
 				<section>
+          <h2>Paramètres dynamiques</h2>
+          <pre><code data-trim>
+$migration = Migration::load('audits');
+if (migration) {
+  $source = $migration->get('source');
+  $source['urls'] = $my_urls;
+  $migration->set('source', $source);
+  $migration->save();
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Lancer la migration</h2>
+          <pre><code data-trim>
+$migration = \Drupal::service('plugin.manager.migration')->createInstance($my_migration_id);
+$executable = new MigrateExecutable($migration, new MigrateMessage());
+$executable->import();
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Les conseils</h2>
+          <P>Analysez (et nettoyez) vos données avant de vous lancer dans la migration</p>
+        </section>
+
+        <section>
+          <img src="log_all_the_things.jpg" />
+          <pre><code data-trim>
+$event->logMessage();
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Et les tests ?</h2>
+          <p>…</p>
+        </section>
+
+        <section>
           <h2>Résolution de problèmes</h2>
+        </section>
+
+        <section>
+          <h2>Dans les plugins</h2>
+          <pre><code data-trim data-noescape>
+/**
+ * @MigrateProcessPlugin(
+ *   id = "my_plugin",
+ *   <mark>handle_multiples = TRUE</mark>
+ * )
+ */
+          </code></pre>
+        </section>
+
+
+        <section>
+          <h2>Des modules pour inspiration</h2>
+          <ul>
+            <li>Migrate Source Directory</li>
+            <li>Migrate Spreadsheet (et même Migrate Google Sheets)</li>
+            <li>Migrate HTML to Paragraphs</li>
+            <li>Migrate Process Inline Images Plugin</li>
+            <li><a href="https://www.drupal.org/project/d8_migration_check">Drupal 8 upgrade estimate</a> (pour D7)</li>
+          </ul>
         </section>
 
 				<section>
