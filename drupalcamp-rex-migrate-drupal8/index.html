@@ -283,6 +283,12 @@ jq -s '.' *.json > data.json
           <pre><code data-trim>
 $event->logMessage();
           </code></pre>
+          <pre><code data-trim>
+process:
+  log:
+    plugin: log
+    source: message
+          </code></pre>
         </section>
 
         <section>
