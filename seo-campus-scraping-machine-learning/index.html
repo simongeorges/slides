@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Fonctionnement d'un moteur de recherche</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <img src="logo_seocampus.png" style="border: 0 none;" />
+          <h1>Écrivez votre moteur de recherche</h1>
+          <h2>SCraping & Machine Learning</h2>
+        </section>
+
+				<section>
+          <img src="simon_georges.jpg" style="float:right;" />
+          <h2>Qui suis-je ?</h2>
+          <p><a href="https://twitter.com/simongeorges">@simongeorges</a></p>
+          <p><img src="logo_makinacorpus.jpg" width="50px" height="50px" style="margin:0 0 -10px 0;border: 0 none;" /> Expert Drupal - SEO <img src="technicalseo.expert.png" width="50px" height="50px" style="border: 0 none;margin:0 0 -10px 0;" /></p>
+        </section>
+
+				<section>
+          <h2>L'instant storytelling</h2>
+        </section>
+
+				<section>
+          <h2>Fin octobre 2017</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5iDBW3F_cYM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+
+				<section>
+          <h2>Mais…</h2>
+          <img src="no_idea.jpg" />
+        </section>
+
+				<section>
+          <h2>Mi-novembre 2017</h2>
+          <video controls="" width="720" height="405"><source src="http://video.renater.fr/jres/2017/jres2017_article_189_720p.mp4" type="video/mp4"></video>
+        </section>
+
+				<section>
+          <img src="crawling-indexing-ranking.png" />
+        </section>
+
+				<section>
+          <h2>Une question de vocabulaire</h2>
+          <img src="googlebot.jpg" />
+        </section>
+
+				<section>
+          <h2>Une question de vocabulaire</h2>
+          <p>GoogleBot, c'est l'étape 1 !</p>
+          <p>Il n'interprète pas le javascript</p>
+        </section>
+
+        <section>
+          <h2>Une question de vocabulaire</h2>
+          <p>L'indexation, c'est "Caffeine"</p>
+          <img src="googlebot-caffeine.png" />
+        </section>
+
+        <section>
+          <h2>D'ailleurs…</h2>
+          <img src="Fetch&Render.png" />
+        </section>
+
+        <section>
+          <h2>D'ailleurs…</h2>
+          <img src="WRS-Chrome_41.png" />
+        </section>
+
+        <section>
+          <h2>Indexing</h2>
+          <p>Traitement naturel du langage (NLP)</p>
+          <ul>
+            <li>Nettoyage HTML</li>
+            <li>HTML -> texte</li>
+            <li>Traitement du texte</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Nettoyage HTML</h2>
+          <p>TO DO Image JS</p>
+        </section>
+
+				<section>
+          <h2>HTML to text</h2>
+          <p>TO DO ???</p>
+        </section>
+
+				<section>
+          <h2>Traitement du texte</h2>
+          <p>Nettoyage (ponctuation, stop words, …)</p>
+          <p>Découpage en phrases</p>
+          <p>Découpage en mots</p>
+        </section>
+
+        <section>
+          <h2>Mais ce n'est pas facile !</h2>
+          <img src="Console.Table.png" />
+        </section>
+
+				<section>
+          <h2>Les ordinateurs ne comprennent pas le texte !</h2>
+          <p>On va le transformer en chiffres</p>
+          <ul>
+            <li>Compte</li>
+            <li>Tf-Idf</li>
+            <li>Co-occurences</li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Compte</h2>
+          <p>"Les oiseaux chantent dans les arbres"</p>
+          <p>TO DO</p>
+        </section>
+
+				<section>
+          <h2>Tf-Idf</h2>
+          <p>Tient compte de la fréquence des mots dans le corpus</p>
+          <p>=> Élimination des "stop words", mise en valeur des mots significatifs</p>
+        </section>
+
+				<section>
+          <h2>Co-occurences</h2>
+          <p>Les documents similaires vont comporter des mots similaires</p>
+        </section>
+
+				<section>
+          <h2>LSI</h2>
+          <p>On compte les mots dans le document</p>
+          <p>TO DO Vidéo Wikipedia</p>
+          <p><small>Source : Wikipedia, LSI</small></p>
+        </section>
+
+				<section>
+          <h2>LDA</h2>
+          <p>Basé sur des probabilités</p>
+          <p>Idée maîtresse : pas plus de 2 à 3 sujets par documents</p>
+        </section>
+
+				<section>
+          <h2>Word2Vec</h2>
+          <p>Google, 2013</p>
+          <img src="Word2vec.png" />
+        </section>
+
+				<section>
+          <h2>Word2Vec</h2>
+          <img src="Word2vec2.png" />
+        </section>
+
+        <section>
+          <h2>Aujourd'hui ?</h2>
+          <p>GloVe (Stanford)</p>
+          <p>FastText (Facebook)</p>
+          <img src="FastText.png" />
+        </section>
+
+        <section>
+          <h2>Le ranking</h2>
+          <p>TO DO</p>
+        </section>
+
+				<section>
+          <h2>Plein de choses à faire</h2>
+          <ul>
+            <li>PageRank</li>
+            <li>"Qualité du site"</li>
+            <li>N-grams</li>
+            <li>Knowledge Graph</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Schéma du crawler (Nutch)</h2>
+          <img src="Nutch.jpg" />
+          <small>Source : <a href="https://queue.acm.org/detail.cfm?id=988408">Building Nutch: Open Source Search</a></small>
+        </section>
+
+        <section>
+          <h2>Schéma générique du ranker</h2>
+          <img src="Nutch.jpg" />
+        </section>
+
+        <section>
+          <h2>Et la recherche vocale ?</h2>
+          <p>TO DO</p>
+        </section>
+
+        <section>
+          <h2>En fait, j'ai menti…</h2>
+          <p><a href="https://queue.acm.org/detail.cfm?id=988407">Why Writing Your Own Search Engine is Hard</a>
+        </section>
+
+        <section>
+          <h2>Des liens pour aller plus loin</h2>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+
+				<section>
+          <h2>Questions ?</h2>
+          <ul>
+            <li><a href="https://makina-corpus.com/blog/metier/2018/seo-scraping-machine-learning-comprendre-le-fonctionnement-dun-moteur-de-recherche">L'article de blog</a></li>
+            <li><a href="">Le diaporama ()</a></li>
+          </ul>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
