@@ -99,7 +99,14 @@
 
         <section>
           <h2>Nettoyage HTML</h2>
-          <p>TO DO Image JS</p>
+          <pre><code data-trim>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-XXXXXX-1', 'auto');
+ga('send', 'pageview');
+</code></pre>
         </section>
 
 				<section>
@@ -109,9 +116,11 @@
 
 				<section>
           <h2>Traitement du texte</h2>
-          <p>Nettoyage (ponctuation, stop words, …)</p>
-          <p>Découpage en phrases</p>
-          <p>Découpage en mots</p>
+          <ul>
+            <li>Nettoyage (ponctuation, stop words, …)</li>
+            <li>Découpage en phrases</li>
+            <li>Découpage en mots</li>
+          </ul>
         </section>
 
         <section>
@@ -149,17 +158,17 @@
 
 				<section>
           <h2>Co-occurences</h2>
-          <p>Les documents similaires vont comporter des mots similaires</p>
+          <blockquote>Les documents similaires vont comporter des mots similaires</blockquote>
         </section>
 
 				<section>
-          <h2>LSI</h2>
+          <h2>LSI (~1990)</h2>
           <img src="Lsi.gif" />
         </section>
 
 				<section>
-          <h2>LDA</h2>
-          <p>Basé sur des probabilités</p>
+          <h2>LDA (2003)</h2>
+          <p>Basé une version probabiliste de LSI (1999)</p>
           <p>Idée maîtresse : pas plus de 2 à 3 sujets par documents</p>
         </section>
 
@@ -197,11 +206,12 @@
 
         <section>
           <h2>Le ranking</h2>
-          <p>TO DO</p>
+          <p>Algorithme type "Learning to Rank" (Microsoft, 2004)</p>
+          <img src="LearningToRank.png" />
         </section>
 
 				<section>
-          <h2>Plein de choses à faire</h2>
+          <h2>Plein de choses à ajouter</h2>
           <ul>
             <li>PageRank</li>
             <li>"Qualité du site"</li>
@@ -253,29 +263,33 @@
         </section>
 
         <section>
-          <h2>Comment optimiser vos contenus ?</h2>
-          <p>Faites du texte facile à résumer ;-)</p>
-        </section>
-
-        <section>
           <h2>Ça peut évoluer…</h2>
           <P>Suivez ce que fait <a href="https://research.google.com/pubs/author35866.html">Enrique Alfonseca</a></p>
         </section>
 
         <section>
-          <h2>J'ai menti dans le titre…</h2>
-          <p><a href="https://queue.acm.org/detail.cfm?id=988407">Why Writing Your Own Search Engine is Hard</a>
+          <h2>Et côté Black Hat ?</h2>
+          <p>Peut-on "tromper" le machine learning ?</p>
         </section>
 
         <section>
-          <h2>Des liens pour aller plus loin</h2>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <h2>Le monde est un grille-pain</h2>
+          <img src="adversarial_patch.png" />
+        </section>
+
+        <section>
+          <h2>Pareil avec l'audio</h2>
+          <p>Amazon et le Super Bowl</p>
+        </section>
+
+        <section>
+          <h2>Et pour le texte ?</h2>
+          <p>Cherchez "adversarial NLP"</p>
+        </section>
+
+        <section>
+          <h2>J'ai menti dans le titre…</h2>
+          <p><a href="https://queue.acm.org/detail.cfm?id=988407">Why Writing Your Own Search Engine is Hard</a>
         </section>
 
 				<section>
