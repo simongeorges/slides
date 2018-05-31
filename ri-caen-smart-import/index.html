@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Smart import, un REX d'utilisation de machine learning</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h1>Smart import, un exemple concret d'utilisation de machine learning</h1>
+        </section>
+
+				<section>
+          <img src="images/simon_georges.jpg" style="float:right;" />
+          <h2>Qui suis-je ?</h2>
+          <p><a href="https://twitter.com/simongeorges">@simongeorges</a></p>
+          <p><img src="images/logo_makinacorpus.jpg" width="100px" height="100px" style="margin:0 0 -30px 0;border: 0 none;" /> Expert Drupal - SEO - ML</p>
+        </section>
+
+        <section>
+          <h2>L'instant story-telling</h2>
+        </section>
+
+        <section>
+          <h2>Fin octobre 2017</h2>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5iDBW3F_cYM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </section>
+
+        <section>
+          <h2>Mais…</h2>
+          <img src="images/no_idea.jpg" />
+        </section>
+
+        <section>
+          <h2>Mi-novembre 2017</h2>
+          <video controls="" width="720" height="405"><source src="http://video.renater.fr/jres/2017/jres2017_article_189_720p.mp4" type="video/mp4"></video>
+        </section>
+
+        <section>
+          <h2>Smart Import</h2>
+          <p>Classification supervisée</p>
+          <p>Détection d'anomalies</p>
+        </section>
+
+				<section>
+          <h2>C'est quoi un projet de Machine Learning ?</h2>
+          <img src="images/Tasks.png">
+        </section>
+
+				<section>
+          <h2>Bien poser le problème</h2>
+          <img src="images/Problem.jpeg">
+        </section>
+
+				<section>
+          <h2>Trouver une stratégie</h2>
+          <img src="images/Strategy.png">
+        </section>
+
+				<section>
+          <h2>Avoir les bonnes données</h2>
+          <img src="images/DL_Perf.png">
+        </section>
+
+				<section>
+          <h2>Choisir un algorithme</h2>
+          <img src="images/Choix_algo.png">
+        </section>
+
+				<section>
+          <h2>La partie la plus facile !</h2>
+          <pre><code data-trim class="hljs">
+          X = data
+          y = classes
+          algo = cluster.DBSCAN()
+          algo.fit(X, y)
+          algo.predict(X)
+          </code></pre>
+        </section>
+
+				<section>
+          <h2>Et pour le Deep Learning ?</h2>
+          <pre><code data-trim class="hljs">
+          model = Sequential()
+          model.add(Couche())
+          model.add(Couche())
+          model.add(Couche())
+          model.compile()
+          model.fit(X, y)
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Paramétrer le modèle vous même, c'est dépassé !</h2>
+          <p>Vive l'"Automatic Machine Learning"</p>
+          <p>Auto-sklearn pour scikit-learn</p>
+          <p>(calcul même les pipelines !)
+          <p>Hyperas pour Keras</p>
+        </section>
+
+        <section>
+          <h2>Évaluer votre modèle !</p>
+          <img src="images/matrice_confusion_emotions.jpeg">
+        </section>
+
+        <section>
+          <h2>Notre pile logicielle</h2>
+          <p>Numpy, Pandas, Matplotlib pour le traitement des données</p>
+        </section>
+
+				<section>
+          <h2>Scikit-learn</h2>
+          <img src="images/Scikit-learn.png">
+        </section>
+
+        <section>
+          <h2>Deep Learning</h2>
+          <p>Keras</p>
+          <p>Surcouche à Tensorflow</p>
+        </section>
+
+        <section>
+          <h2>Pour commencer ?</h2>
+          <img src="images/rapidminer.png" />
+        </section>
+
+				<section>
+          <h2>Et, bien sûr, un canvas…</h2>
+          <img src="images/Canvas.png">
+        </section>
+
+        <section>
+          <h2>Des ressources pour aller plus loin ?</h2>
+          <ul>
+            <li><a href="https://developers.google.com/machine-learning/practica/image-classification/">Le nouveau cours de Google</a></li>
+            <li><a href="http://www.themtank.org/a-year-in-computer-vision">L'état de l'art du traitement d'images</a></li>
+            <li><a href="https://medium.com/huggingface/universal-word-sentence-embeddings-ce48ddc8fc3a">L'état de l'art du traitement de texte</a></li>
+            <li><a href="https://towardsdatascience.com/">Towards Data Science</a>, un très bon blog</p>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Des questions ?</h1>
+        </section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
