@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>éTHIQUE et atTAQUES, l'autre face du machine learning</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h1>éTHIQUE et atTAQUES, l'autre face du machine learning</h1>
+        </section>
+				<section>
+          <img src="img/simon_georges.jpg" style="float:right;" />
+          <h2>Qui suis-je ?</h2>
+          <p><a href="https://twitter.com/simongeorges">@simongeorges</a></p>
+          <p><img src="img/logo_makinacorpus.jpg" width="100px" height="100px" style="margin:0 0 -30px 0;border: 0 none;" /></p>
+        </section>
+				<section>
+          <h2>Le machine learning aujourd'hui</h2>
+          <img src="img/marabout.jpg" />
+        </section>
+				<section>
+          <h2>Le "technologisme" actuel</h2>
+          <p><a href="https://www.theatlantic.com/magazine/archive/2018/10/yuval-noah-harari-technology-tyranny/568330/">La technologie favorise la tyrannie</a></p>
+        </section>
+				<section>
+          <h2>La fiction</h2>
+          <p><img src="img/Black_Mirror_NoseDive.png" style="height:400px;" /></p>
+          <p><a href="https://information.tv5monde.com/info/surveillance-le-reseau-francais-intelligent-d-identification-par-cameras-arrive-242520">Bientôt en France ?</a></p>
+        </section>
+        <section>
+          <h2>La réalité</h2>
+          <img src="img/chine-credit-social.jpg" style="height:400px;" />
+          <p><a href="https://www.nytimes.com/2018/07/08/business/china-surveillance-technology.html">Le crédit social chinois</a></p>
+        </section>
+				<section>
+          <h2>Pourquoi l'éthique ?</h2>
+          <p>Algorithmes publics (parcoursup) ?</p>
+          <p>Qui est responsable ?</p>
+        </section>
+        <section>
+          <h2>Que dit la loi ?</h2>
+          <p>Rien</p>
+          <p><a href="https://www.politico.eu/article/pekka-ala-pietila-artificial-intelligence-europe-shouldnt-rush-to-regulate-ai-says-top-ethics-adviser/">"Il ne faut pas réguler" (UE)</a></p>
+          <p><a href="https://www.laquadrature.net/fr/technopolice_cnil">"Il faut pouvoir expérimenter" (France)</a></p>
+        </section>
+				<section>
+          <h2>Est-ce vraiment de l'AI ?</h2>
+          <p>De <a href="https://www.theguardian.com/technology/2018/jul/06/artificial-intelligence-ai-humans-bots-tech-companies">fausses "startups AI"</a></p>
+        </section>
+				<section>
+          <h2>Les recommandations</h2>
+          <p>Sont-elle faites pour le consommateur ou pour la plateforme elle-même ?</p>
+        </section>
+				<section>
+          <h2>Trop de données ?</h2>
+          <p>Test à Londres en juillet 2018 : <a href="https://www.developpez.com/actu/212784/A-Londres-la-police-teste-une-technologie-de-reconnaissance-faciale-pour-retrouver-des-suspects-les-populations-entre-approbation-et-condamnation/">98% de faux positifs</a></p>
+        </section>
+				<section>
+          <h2>Reconnaissance faciale</h2>
+          <p><a href="https://www.aclu.org/blog/privacy-technology/surveillance-technologies/amazons-face-recognition-falsely-matched-28">L'exemple du congrès américain</a></p>
+        </section>
+				<section>
+          <h2>Pourcentage de confiance</h2>
+          <img src="img/predictions.png" />
+        </section>
+				<section>
+          <h2>Toujours analyser ses résultats</h2>
+          <p>"L'algorithme, c'est une opinion encapsulée dans du code"</p>
+          <p><a href="https://medium.com/@jrzech/what-are-radiological-deep-learning-models-actually-learning-f97a546c5b98">Exemple des radios pulmonaires</a></p>
+        </section>
+        <section>
+          <h2>Interpréter les résultats</h2>
+          <p><img src="img/explainability.jpeg" style="height:400px;" /></p>
+          <p><a href="https://distill.pub/2018/building-blocks/">On comprend mieux les algorithmes</a></p>
+        </section>
+				<section>
+          <h2>L'apprentissage automatique est "conservateur"</h2>
+          <p>Entraîné sur les données du passé</p>
+          <p>Les données sont biaisés, sauf si on prend le temps de travailler les données d'entraînement</p>
+        </section>
+				<section>
+          <h2>Les biais</h2>
+          <p><a href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G">Un recrutement sexiste</a></p>
+        </section>
+				<section>
+          <h2>Sexistes</h2>
+          <p><a href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight/amazon-scraps-secret-ai-recruiting-tool-that-showed-bias-against-women-idUSKCN1MK08G">Un recrutement sexiste</a></p>
+        </section>
+				<section>
+          <h2>Raciaux</h2>
+          <p><iframe src="https://www.youtube-nocookie.com/embed/QxuyfWoVV98?rel=0" width="560" height="315" frameborder="0"></iframe></p>
+        </section>
+        <section>
+          <h2>Le monde est blanc, le monde est beau</h2>
+          <p>À <a href="https://blog.insightdatascience.com/generating-custom-photo-realistic-faces-using-ai-d170b1b59255">l'image d'Hollywood</a></p>
+        </section>
+        <section>
+          <h2>D'autres exemples d'utilisation…</h2>
+          <p><a href="https://osf.io/fk3xr/">Détection de l'orientation sexuelle en fonction du visage</a></p>
+          <p><a href="https://github.com/iperov/DeepFaceLab">Deep Fakes</a></p>
+          <p>Le site de référence : <a href="https://github.com/daviddao/awful-ai">Awful AI</a></p>
+        </section>
+				<section>
+          <h2>L'IA "responsable"</h2>
+          <p>Conforme aux règles juridiques</p>
+          <p>Conforme aux valeurs éthiques</p>
+          <p>Robuste</p>
+          <p><a href="https://www.franceculture.fr/emissions/la-methode-scientifique/ethique-numerique-des-datas-sous-serment">Émission de France Culture</a></p>
+          <p><a href="https://www.lemonde.fr/festival/article/2018/10/25/yoshua-bengio-l-intelligence-artificielle-doit-etre-utilisee-en-accord-avec-des-principes-moraux_5374152_4415198.html">Interview</a></p>
+        </section>
+				<section>
+          <h2>Des solutions ?</h2>
+          <p><a href="https://dataforgood.fr/">Data for Good</a></p>
+          <p><a href="https://algotransparency.org/">Algo Transparency</a></p>
+        </section>
+				<section>
+          <h2>Un serment d'Hippocrate</h2>
+          <p><a href="https://hippocrate.tech/">Hippocrate.Tech</a></p>
+          <p>Des valeurs, et une checklist, pour prise de conscience</p>
+          <p>Rédigé collectivement sur Framavox, par Data for Good</p>
+        </section>
+				<section>
+          <h2>5 valeurs</h2>
+          <ul>
+            <li>Intégrité scientifique et rigueur</li>
+            <li>Transparence</li>
+            <li>Équité</li>
+            <li>Respect</li>
+            <li>Responsabilité et indépendance</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Une question de culture</h2>
+          <p><img src="img/voiture_autonome.png" style="height:400px;" /></p>
+          <p><a href="https://www.technologyreview.com/s/612341/a-global-ethics-study-aims-to-help-ai-solve-the-self-driving-trolley-problem/">Qui doit tuer la voiture autonome ?</a></p>
+        </section>
+				<section>
+          <h2>Justement, les attaques…</h2>
+          <p>Les réseaux "adversaires"</p>
+          <p>Des pokemons… aux voitures autonomes</p>
+        </section>
+        <section>
+          <h2>Le monde est un grille-pain</h2>
+          <img src="img/adversarial_patch.png" />
+        </section>
+        <section>
+          <h2>Transformer les images</h2>
+          <p><img src="img/GAN_images.jpeg" /></p>
+          <p><a href="http://slides.com/tiffanysouterre/deck#/">Voir toute la présentation</a></p>
+        </section>
+        <section>
+          <h2>Les voitures autonomes</h2>
+          <img src="img/stops.png" />
+          <p><a href="https://arxiv.org/pdf/1802.06430.pdf">Beaucoup</a> de <a href="https://arxiv.org/pdf/1707.08945.pdf">moyens</a> de tromper les voitures</p>
+        </section>
+				<section>
+          <h2>Camouflage : le projet CV Dazzle</h2>
+          <img src="img/look-1.jpg" style="height:200px" />
+          <img src="img/look-2.jpg" style="height:200px" />
+          <img src="img/look-3.jpg" style="height:200px" />
+          <img src="img/look-4.jpg" style="height:200px" />
+          <p><a href="https://cvdazzle.com/">Les principaux algorithmes sont testés</a></p>
+        </section>
+				<section>
+          <h2>Essentiellement du maquillage</h2>
+          <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kGGnnp43uNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        </section>
+				<section>
+          <h2>Toujours plus loin…</h2>
+          <p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wippooDL6WE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+          <p>Mais la Chine peut déjà <a href="https://techcrunch.com/2018/11/07/china-can-apparently-now-identify-citizens-based-on-the-way-they-walk/">identifer les gens sur leur façon de marcher…</a></p>
+        </section>
+				<section>
+          <h2>Des solutions ?</h2>
+          <p><a href="https://www.robust-ml.org/">Robust ML</a></p>
+        </section>
+        <section>
+          <h2>Nous sommes des apprentis sorciers</h2>
+        </section>
+				<section>
+          <h2>Des questions ?</h2>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
