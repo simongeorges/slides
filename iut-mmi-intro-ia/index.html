@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction à l'intelligence artificielle</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section>
+          <h1>Introduction à l'intelligence artificielle</h1>
+        </section>
+
+				<section>
+          <img src="images/simon_georges.jpg" style="float:right;" />
+          <h2>Qui suis-je ?</h2>
+          <p><a href="https://twitter.com/simongeorges">@simongeorges</a></p>
+          <p><img src="images/logo_makinacorpus.jpg" width="100px" height="100px" style="margin:0 0 -30px 0;border: 0 none;" /> Expert Drupal - SEO - IA</p>
+        </section>
+
+        <section>
+          <h2>Ce qu'on va voir</h2>
+          <p>Le vocabulaire, les principes (la partie pénible)</p>
+          <p>Des exemples concrets (la partie fun)</p>
+          <p>Les enjeux (la partie qui fait peur)</p>
+        </section>
+
+        <section>
+          <h2>Oubliez ce que vous avez vu dans les jeux</h2>
+          <p>Counter Strike, 0.A.D.…</p>
+          <p>Une vraie IA décide de ses actions</p>
+        </section>
+
+        <section>
+          <h2>Ce qui est maîtrisé</h2>
+          <p>Le machine learning (apprentissage automatique)</p>
+          <p>± des statistiques</p>
+        </section>
+
+        <section>
+          <h2>L'apprentissage supervisé</h2>
+          <p>Le contraire du développement informatique classique</p>
+          <p>On apprend de ce qui existe</p>
+        </section>
+
+        <section>
+          <h2>L'apprentissage non supervisé</h2>
+          <p>On ne sait rien</p>
+        </section>
+
+        <section>
+          <h2>Ce qui est à la mode</h2>
+          <p>Les réseaux de neurones</p>
+          <p>Pour les traitements plus complexes</p>
+        </section>
+
+        <section>
+          <h2>À quoi ça ressemble ?</h2>
+        </section>
+
+        <section>
+          <h2>Pour les jeux</h2>
+          <p>Apprentissage par renforcement</p>
+        </section>
+
+        <section>
+          <h2>Concrètement : exemple de code</h2>
+          <pre><code data-trim class="hljs">
+          X = data
+          y = classes
+          algo = cluster.DBSCAN()
+          algo.fit(X, y)
+          algo.predict(X)
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Et pour un réseau de neurones</h2>
+          <pre><code data-trim class="hljs">
+          model = Sequential()
+          model.add(Couche())
+          model.add(Couche())
+          model.add(Couche())
+          model.compile()
+          model.fit(X, y)
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Le plus dur…</h2>
+          <p>Ce n'est pas d'en faire…</p>
+          <p>C'est de comprendre ce qu'on fait</p>
+        </section>
+
+        <section>
+          <h2>Exemples d'application</h2>
+        </section>
+
+        <section>
+          <h2>Reconnaissance de formes</h2>
+          <img src="images/predictions.png" /> 
+        </section>
+
+        <section>
+          <h2>À savoir</h2>
+          <p>l'IA ne reconnait que ce qu'elle a appris</p>
+          <p>Il n'y a jamais de certitudes</p>
+          <p>(IBM et le sénat américain)</p>
+        </section>
+
+        <section>
+          <h2>Reconnaissance de formes</h2>
+          <p>St-Valentin</p>
+        </section>
+
+        <section>
+          <h2>Génération d'images</h2>
+          <img src="images/GUI.gif" />
+        </section>
+
+        <section>
+          <h2>Jeux vidéo</h2>
+          <video controls>
+            <source src="images/Alphastar.mp4" type="video/mp4">
+          </video>
+        </section>
+
+        <section>
+          <h2>Génération de vidéos</h2>
+          <video controls>
+            <source src="images/JLSB.mp4" type="video/mp4">
+          </video>
+        </section>
+
+        <section>
+          <h2>Les impacts sociaux</h2>
+        </section>
+
+        <section>
+          <h2>Reproduction des schémas</h2>
+          <p>Biais raciaux</p>
+          <p>Biais sexistes (Amazon)</p>
+        </section>
+
+        <section>
+          <h2>Censure automatique</h2>
+          <img src="images/tumblr.png" width="50%" />
+        </section>
+
+        <section>
+          <h2>Disparition de la vie privée</h2>
+          <p>Reconnaissance facile partout</p>
+        </section>
+
+        <section>
+          <h2>Deshumanisation</h2>
+          <p>Black Mirror / Chine</p>
+        </section>
+
+        <section>
+          <h2>Des ressources pour aller plus loin ?</h2>
+          <ul>
+            <li><a href="https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471">Machine Learning is fun !</a>, une série d'articles</li>
+            <li><a href="http://www.themtank.org/a-year-in-computer-vision">L'état de l'art du traitement d'images</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Questions ?</h1>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
