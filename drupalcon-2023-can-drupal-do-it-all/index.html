@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Drupalcon Lille 2023 - From CMS to Page Builder, can Drupal do it all?</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./_assets/makina.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+<!-- .slide: data-background="./Title.png" -->
+<style>
+    h1 { width: 100%; }
+</style>
+
+# From CMS to Page Builder, can Drupal do it all?
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Ecocup-Makina-Corpus.png" -->
+
+## Who am I?
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Mains-levées.jpg" -->
+
+## Who are you?
+
+<aside class="notes"><ul>
+<li>How many Drupal devs / project managers in the room?</li>
+<li>How many clients / people thinking of building their website in Drupal?</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+## What's a CMS?
+
+<!-- .slide: data-background="./Petits-fours.jpg" -->
+
+<aside class="notes"><p>Write once, re-use everywhere</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Mignardises.jpg" -->
+
+## What's a page builder?
+
+<aside class="notes"><p>Adjust every tiny piece of content, wherever it is</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Airbus.jpg" -->
+
+## Context: a big project
+
+<aside class="notes"><ul>
+<li>Airbus, migration from Adobe Experience Manager</li>
+<li>They used &quot;components&quot; that they could put into &quot;pages&quot;.</li>
+<li>Everything could be overriden.</li>
+<li>Websites appear to be similar, but clients are vastly different (editorial, business)</li>
+<li>The whole team was from a generic IT consultant (PHP devs, not Drupal specialists)</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="#b5b42b" -->
+
+## 1. Hire specialists
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="#b5b42b" -->
+
+## 2. Train your clients
+
+<aside class="notes"><p>at least giving them basic Drupal knowledge</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Yes.jpg" -->
+
+## At first we said "yes"
+
+<aside class="notes"><p>When we started the project, 3 years ago, we said yes to building exactly the same thing.</p>
+<p>It&#39;s been well established that you can do anything in Drupal</p>
+<p>So nobody stops to question whether we should.</p>
+<p>2 content types :</p>
+<ul>
+<li>&quot;News&quot;, a typical content type, with fixed fields, and a dedicated template</li>
+<li>&quot;Flexible page&quot;, a rich layout with possible integration of more than 20+ different &quot;components&quot;, all with tons of options.</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="#b5b42b" -->
+
+## 3. Learn to say no
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Anarchy.jpg" -->
+
+## 2 years later
+
+<aside class="notes"><p>Content editors are happy to be free, but:</p>
+<ul>
+<li>horrible editing UX (too many options, cognitive burden)</li>
+<li>all pages are different =&gt; Horrible user experience for visitors</li>
+<li>Until now, the project was piloted mainly by the business team, with no real knowledge of Drupal best practices, or even basic features (Content types, Views, Blocs, ...)</li>
+<li>Project focused on building new features, without a look on what&#39;s already there</li>
+<li>New team on the project, mixed team composed of different specialists (UX, frontend, Drupal)</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./audit.jpg" -->
+
+## UX Audit
+
+<aside class="notes"><ul>
+<li>Both front &amp; back-office</li>
+<li>&quot;Quick wins&quot; on the back-office on the current solution</li>
+<li>... while we wait for a totally new front-office based on a new solution</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="#b5b42b" -->
+
+## 4. Deliver value early / regularly
+
+<aside class="notes"><p>80/20</p>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Gin.png" -->
+
+## Quick wins?
+
+<aside class="notes"><ul>
+<li>New admin theme Gin</li>
+<li>Help texts</li>
+<li>Field group</li>
+<li>Hide useless fields (Metatags...)</li>
+<li>Change widgets</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Airbus-redesign.png" -->
+
+## Long term re-design
+
+<aside class="notes"><ul>
+<li>Being done by the UX consultant</li>
+<li>Focus on designing components that can be re-used</li>
+<li>Trying to create more page templates with some fixed areas</li>
+<li>A big focus on Accessibility &amp; Green-IT (a good frontend developper really helps!)</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./paragraphs.png" -->
+
+## V1: Paragraphs vs. Layout Builder (vs. Gutenberg)
+
+<aside class="notes"><ul>
+<li>Several options: Paragraphs / Layout Builder (core) / Gutenberg</li>
+<li>Gutenberg, not enough feedback, while other are well-established solutions</li>
+<li>V1 based on &quot;Layout Builder&quot;, with full control</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="#b5b42b" -->
+
+## 5. Rely on the community
+
+<aside class="notes"><ul>
+<li>patchs</li>
+<li>Composer</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Layout-builder-improvements.png" -->
+<div style="background: #222; padding: 1em; width: 60%;">
+
+## V2: A "new" technical solution
+
+### Issue n°3361359
+</div>
+
+<aside class="notes"><ul>
+<li>Keep Layout Builder</li>
+<li>Add lots of restrictions</li>
+<li>Use contributed modules (Restrictions, Limit, ...)</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="#b5b42b" -->
+
+## 6. Be part of the community
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./space.jpg" -->
+
+## "If you want to go fast, go alone...
+
+## ... if you want to go far, go together"
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Yes-we-can.jpg" -->
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./spiderman.jpg" -->
+
+## But with great power...
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background="./Title.png" -->
+
+## Questions?
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"transition":"slide"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
